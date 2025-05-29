@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.flashcard {
+    width: 300px;
+    height: 150px;
+    background: white;
+    border: 2px solid #333;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
