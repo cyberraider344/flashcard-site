@@ -1,30 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin: 40px;
+    background-color: #111;
+    color: #eee;
 }
-.container {
-    text-align: center;
+h1 {
+    color: #00ffff;
 }
-.flashcard {
-    width: 300px;
-    height: 150px;
-    background: white;
-    border: 2px solid #333;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    transition: 0.3s;
+h2 {
+    color: #ffaa00;
 }
-.buttons button {
-    margin: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
+.category {
+    margin-bottom: 30px;
+}
+a {
+    color: #00ff88;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
