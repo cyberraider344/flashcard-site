@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CyberRaider Flashcard & PDF Hub</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       background-color: #111;
@@ -10,12 +11,12 @@
       font-family: Arial, sans-serif;
       padding: 2rem;
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: #00ffff;
     }
     ul {
-      list-style: none;
-      padding: 0;
+      list-style-type: none;
+      padding-left: 0;
     }
     li {
       margin-bottom: 0.5rem;
@@ -38,21 +39,18 @@
       border-radius: 8px;
       cursor: pointer;
     }
-    .flashcard .back {
-      display: none;
+    .linux-section h3 {
+      margin-bottom: 0.5rem;
     }
-    .flashcard.show .front {
-      display: none;
-    }
-    .flashcard.show .back {
-      display: block;
+    .sublist {
+      margin-left: 1rem;
     }
   </style>
 </head>
 <body>
   <h1>🧠 CyberRaider Study Hub</h1>
 
-  <!-- PDF Section -->
+  <!-- PDF Categories -->
   <div class="category">
     <h2>🔐 Password Cracking</h2>
     <ul>
@@ -85,79 +83,30 @@
     </ul>
   </div>
 
-  <!-- Flashcards Section -->
-  <div class="category">
-    <h2>📘 Security+ Flashcards</h2>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>Vulnerability:</strong> A weakness that can be exploited.</div>
-      <div class="back">A flaw in software or systems that attackers can abuse to gain access.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>Exploit:</strong> Code/method to abuse a vulnerability.</div>
-      <div class="back">The tool or script to take advantage of the weakness.</div>
-    </div>
-    <!-- (More flashcards already here) -->
-  </div>
-
-  <!-- Linux Terms Flashcards -->
-  <div class="category">
-    <h2>🐧 Basic Linux Commands</h2>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>pwd</strong> - Print working directory</div>
-      <div class="back">Displays the current directory path.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>ls</strong> - List directory contents</div>
-      <div class="back">Shows files and folders in the current directory.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>cd</strong> - Change directory</div>
-      <div class="back">Used to move into another directory.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>mkdir</strong> - Make directory</div>
-      <div class="back">Creates a new folder/directory.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>rm</strong> - Remove files/directories</div>
-      <div class="back">Deletes files or folders (use with caution).</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>cp</strong> - Copy files/directories</div>
-      <div class="back">Copies files from one location to another.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>mv</strong> - Move or rename files</div>
-      <div class="back">Moves files or changes their names.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>touch</strong> - Create new file</div>
-      <div class="back">Creates an empty file.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>chmod</strong> - Change permissions</div>
-      <div class="back">Modifies who can read/write/execute files.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>chown</strong> - Change ownership</div>
-      <div class="back">Changes the user/group that owns a file or folder.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>grep</strong> - Search text</div>
-      <div class="back">Finds patterns/words in text files.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>ps</strong> - Process status</div>
-      <div class="back">Displays currently running processes.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>top</strong> - System resource monitor</div>
-      <div class="back">Live view of system resource usage.</div>
-    </div>
-    <div class="flashcard" onclick="this.classList.toggle('show')">
-      <div class="front"><strong>ifconfig/ip a</strong> - Network info</div>
-      <div class="back">Shows IP address and interfaces.</div>
-    </div>
+  <!-- Linux Flashcard Table of Contents -->
+  <div class="category linux-section">
+    <h2>🐧 Linux Commands Cheat Sheet</h2>
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#file-ops">File and Directory Operations Commands</a></li>
+      <li><a href="#file-perms">File Permission Commands</a></li>
+      <li><a href="#archiving">File Compression and Archiving Commands</a></li>
+      <li><a href="#process">Process Management Commands</a></li>
+      <li><a href="#sysinfo">System Information Commands</a></li>
+      <li><a href="#networking">Networking Commands</a></li>
+      <li><a href="#io">IO Redirection Commands</a></li>
+      <li><a href="#env">Environment Variable Commands</a></li>
+      <li><a href="#users">User Management Commands</a></li>
+      <li><a href="#shortcuts">Shortcuts Commands List</a>
+        <ul class="sublist">
+          <li><a href="#bash">Bash Shortcuts Commands</a></li>
+          <li><a href="#nano">Nano Shortcuts Commands</a></li>
+          <li><a href="#vi">VI Shortcuts Commands</a></li>
+          <li><a href="#vim">Vim Shortcuts Commands</a></li>
+        </ul>
+      </li>
+      <li><a href="#faqs">FAQs on Linux Commands Cheat Sheet</a></li>
+    </ul>
   </div>
 </body>
 </html>
